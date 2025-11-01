@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_BOOKS 100
 void addNewBook(int isbns[], char titles[][50], float prices[], int quantities[], int *count) {
-    if (*count >= MAX_BOOKS) {
+    if (*count >= 100) {
         printf("Inventory full! Cannot add another book.\n");
         return;
     }
@@ -69,10 +68,10 @@ void lowStockReport(int isbns[], char titles[][50], float prices[], int quantiti
         printf("No books with low stock.\n");
 }
 int main() {
-    int isbns[MAX_BOOKS];
-    char titles[MAX_BOOKS][50];
-    float prices[MAX_BOOKS];
-    int quantities[MAX_BOOKS];
+    int isbns[100];
+    char titles[100][50];
+    float prices[100];
+    int quantities[100];
     int count = 0;
     int choice;
     do {
